@@ -33,4 +33,6 @@ class TodoBook:
         self.todos [id] = new_object
         return id
 
+    def pending_todos(self) -> list:
+        return[todo for todo in self.todos.values() if not todo.completed]
 
