@@ -27,3 +27,10 @@ class TodoBook:
     def __int__(self):
         self.todos: dict [int. Todo] = {}
 
+    def _add_todo(self, title:str,description: str) -> int:
+        id = len(self.todos) + 1
+        new_object= Todo(title, description)
+        self.todos [id] = new_object
+        return id
+
+
